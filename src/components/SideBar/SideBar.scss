@@ -1,0 +1,170 @@
+.nav-bar{
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 60px;
+    height: 100%;
+    background-color: #181818;
+    min-height: 500px;
+    z-index: 3;
+    transition: 1s;
+
+    .logo{
+        
+        padding: 15px 0;
+        display: block;
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-wrap: wrap;
+        margin-top: 15px;
+        text-decoration: none;
+        .logo-image{
+            display: block;
+            width: 40px;
+            border-radius: 50%;
+            text-align: center;
+            border: 2px solid #ffd700;
+        }
+        .logo-text{
+            color: white;
+            font-family: "La Belle Aurore";
+            
+            margin: 0;
+            font-size: x-small;
+        }
+        .firstLetter{
+            color: #ffd700;
+            font-size: large;
+
+        }
+    }
+
+    .pages{
+        display: block;
+        width: 100%;
+        position: absolute;
+        left: 0;
+        top: 35%;
+        text-decoration: none;
+        
+    }
+    .links{
+        font-family: "coolvetica";
+        letter-spacing: 2px;
+        width: 100%;
+        text-decoration: none;
+        color: #ffd700;
+        &::after{
+            content: "";
+            font-size: xx-small;
+            position: absolute;
+            left: 0%;
+            transform: translateY(50px);
+            opacity: 0;
+            transition: 1s;
+            
+        }
+        
+    }
+    .icon{
+        width: 100%;
+        font-size: 24px;
+        transition: 0.2s;
+        margin: 20px auto;
+        &:hover{
+            color: #ffd700;
+        }
+    }
+    .socials{
+        display: block;
+        width: 100%;
+        position: absolute;
+        left: 0;
+        top: 90%;
+        text-decoration: none;
+        margin: 0;
+        padding: 0;
+        list-style: none;
+        .smallIcon{
+            width: 100%;
+            font-size: 17px;
+            transition: 0.2s;
+            margin: 10px auto;
+            &:hover{
+                color: #ffd700;
+            }
+        }
+    }
+    &:hover .pages .links:first-child::after{
+        opacity: 1;
+        content: "HOME";
+        left: 24%;
+        
+        
+    }
+    &:hover .pages .links:nth-child(2)::after{
+        opacity: 1;
+        content: "ABOUT";
+        left: 24%;
+    }
+    &:hover .pages .links:nth-child(3)::after{
+        opacity: 1;
+        content: "SKILLS";
+        left: 24%;
+    }
+    &:hover .pages .links:nth-child(4)::after{
+        opacity: 1;
+        content: "MY WORK";
+        left: 12%;
+    }
+    &:hover .pages .links:last-child::after{
+        opacity: 1;
+        content: "CONTACT";
+        left: 12%;
+    }
+
+}
+
+
+
+/* start mobile media query */
+
+@media (max-width: 600px){
+.nav-bar {
+    width: 40px;
+    height: 100%;
+    min-height: auto;
+    &:hover .pages .links:first-child::after{
+        content: "";
+    }
+    &:hover .pages .links:nth-child(2)::after{
+        content: "";
+    }
+    &:hover .pages .links:nth-child(3)::after{
+        content: "";
+    }
+    &:hover .pages .links:nth-child(4)::after{
+        content: "";
+    }
+    &:hover .pages .links:last-child::after{
+        content: "";
+    }
+    .pages{
+        top: 20%;
+    }
+    .socials{
+        top: 80%;
+    }
+}
+.nav-bar .logo .logo-image {
+    width: 20px;
+}
+
+}
+
+
+/* end mobile media query */
+
+

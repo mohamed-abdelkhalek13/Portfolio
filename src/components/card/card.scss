@@ -1,0 +1,162 @@
+.card-container{
+    animation: fadeIn 1s 1s;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    padding: 20px;
+    background-color: #115173;
+
+    position: absolute;
+    margin: 60px;
+    left: 17%;
+    top: 60%;
+    transform: translateY(-50%);
+    width: fit-content;
+
+    color: #ffd700;
+    .card{
+        margin: 20px;
+        padding: 5px;
+        background-color: #022c43;
+        width: 300px;
+        height: 300px;
+        .image-container{
+            position: relative;
+            width: 300px;
+            .project-pic{
+                display: block;
+                width: 100%;
+                height: 100%;
+            }
+        }
+        .hover-overlay{
+            position: absolute;
+            background-color: #ffd900c9;
+            left: 0;
+            top: 0;
+            width: 0%;
+            height: 100%;
+            transition: 0.2s;
+            .description{
+                display: none;
+                position: absolute;
+                left: 0;
+                top: 0;
+                color: #022c43;
+                font-size: 2rem;
+                padding: 10px;
+                animation: fadeIn 1s ;
+                span{
+                    font-size: 1rem;
+                    padding: 20px;
+                }
+            }
+            .view{
+                position: absolute;
+                left: 0;
+                bottom: 10%;
+                color: #022c43;
+                font-size: 20px;
+                margin-left: 30px;
+                display: inline-block;
+                width: 60px;
+                text-align: center;
+                border-radius: 5px;
+                margin-top: 20px;
+                &:hover{
+                    background-color: #022c43;
+                    display: block;
+                    a{
+                        color: #ffd700;
+                        border:2px solid #022c43 ;
+                    }
+                }
+                a{
+                    color: #022c43;
+                    text-decoration: none;
+                    display: none;
+                }
+            }
+        }
+    }
+    .image-container{
+        animation: fadeIn 1s 1s;
+        &:hover .hover-overlay{
+            width: 100%;
+
+            .view, a, .description{
+                display: block;
+            }
+            .view{
+                border:2px solid #022c43 ;
+            }
+        }
+        width: 400px;
+        .project-pic{
+            display: block;
+            width: 100%;
+            height: 100%;
+        }
+    }
+    .project-name{
+        font-weight: bold;
+        font-family: "coolvetica";
+        letter-spacing: 2px;
+        font-size: 1rem;
+        margin: 20px 0 0 20px;
+        span{
+            font-size: 2rem;
+            letter-spacing: 2px;
+            margin-left: 20px;
+            animation: fadeIn 1.5s 1s;
+            animation-fill-mode: forwards;
+        }
+    }
+}
+
+
+
+/* start mobile media query */
+
+@media (max-width: 600px){
+    .card-container{
+        margin-left: 20px;
+        transform: translateY(-175px);
+    }
+    .card-container .card {
+        width: 175px;
+        height: 175px;
+        .hover-overlay .view{
+            position: absolute;
+            font-weight: bold;
+            bottom: 5%;
+            font-size: 12px;
+            width: 30px;
+
+        }
+        .hover-overlay .description{
+            font-weight: bold;
+
+            font-size: 20px;
+            span{
+                font-weight: bold;
+
+                font-size: 12px;
+            }
+        }
+        .project-name{
+            span{
+                font-size: 1rem;
+                margin-left: 30px;
+
+            }
+        }
+        .image-container{
+            width: 175px;
+        }
+
+    }
+
+}
+
+/* end mobile media query */

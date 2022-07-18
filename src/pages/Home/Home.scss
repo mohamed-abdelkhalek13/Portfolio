@@ -1,0 +1,69 @@
+
+.text-zone{
+    position: absolute;
+    left: 10%;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 40%;
+}
+.headLine{
+    color: white;
+    font-size: 60px;
+    margin:0;
+    font-family: "coolvetica";
+    letter-spacing: 2px;
+    font-weight: 400;
+
+}
+
+.btn {
+    text-decoration: none;
+    color: #ffd700;
+    font-size: 20px;
+    letter-spacing: 4px;
+    border: 1px solid #ffd700;
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-align: center;
+    animation: fadeIn 1s 1.8s backwards;
+    &:hover{
+        color: #333;
+        background-color: #ffd700;
+    }
+}
+.photo{
+    position: absolute;
+    top: 10%;
+}
+
+
+/* start web media query */
+
+@media (max-width: 700px){
+    .text-zone{
+        left: 20%;
+    }
+    .headLine{
+        font-size: 40px;
+        
+    }
+}
+/* start web media query */
+
+
+
+/* end web media query */
+
+/* start mobile media query */
+
+@media (max-width: 600px){
+    .text-zone{
+        left: 20%;
+    }
+    .headLine{
+        font-size: 25px;
+        
+    }
+}
+
+/* end mobile media query */

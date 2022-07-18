@@ -1,0 +1,238 @@
+.contact-zone{
+    position: absolute;
+    width: 40%;
+    width: 700px;
+    top: 25%;
+    .contact-paragraph{
+        font-size: 17px;
+        color: white;
+        font-family: "coolvetica";
+        letter-spacing: 1px;
+        font-weight: 300;
+        min-width: fit-content;
+    }
+}
+
+.contact-header{
+    color: #ffd700;
+    font-family: "coolvetica";
+    font-size: 80px;
+    margin-bottom: 50px;
+}
+
+.contact-form {
+    margin-top: 20px;
+    position: absolute;
+    left: 10%;
+    top: 62%;
+    transform: translateY(-50%);
+    width: 40%;
+    animation: fadeIn 1s 1s;
+    animation-fill-mode: forwards;
+
+}
+ul {
+    width: 150%;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    input{
+        width: 100%;
+        margin-bottom: 10px;
+        height: 60px;
+        padding-left: 10px;
+        background-color: #115173;
+        color: white;
+        border: none;
+        font-size: 20px;
+        transition: 0.5s;
+        font-family: "coolvetica";
+        letter-spacing: 2px;
+
+        &:focus{
+            border-bottom: 3px solid #ffd700;
+        }
+    }
+    textarea{
+        color: white;
+        width: 100%;
+        height: 200px;
+        background-color: #115173;
+        border: none;
+        padding: 10px;
+        font-size: 20px;
+        transition: 0.5s;
+        font-family: "coolvetica";
+        letter-spacing: 2px;
+
+        &:focus{
+            border-bottom: 3px solid #ffd700;
+        }
+    }
+    .half{
+        width: 100%;
+        display: flex;
+        li{
+            &:first-child{
+                margin-right: 2%;
+            }
+            width: 49%;
+            input{
+                width: 100%;
+            }
+        }
+    }
+    .flat-button{
+        width: 100px;
+        height: 40px;
+        margin-top: 20px;
+        background-color: #022c43;
+        border: 1px solid #ffd700;
+        border-radius: 5px;
+        color: #ffd700;
+        cursor: pointer;
+        font-family: "coolvetica";
+        letter-spacing: 2px;
+        &:hover{
+            background-color: #ffd700;
+            color: #022c43;
+        }
+    }
+}
+
+
+
+
+
+/* start web media query */
+
+@media (max-width: 1050px){
+    .text-zone .contact-paragraph{
+        position: absolute;
+        bottom: -40%;
+    }
+    .contact-form {
+        left: 10%;
+        top: 60%;
+        ul textarea{
+            width: 500px;
+            height: 100px;
+            font-size: 15px;
+
+        }
+
+        ul input{
+            font-size: 15px;
+
+            height: 40px;
+            width: 500px;
+
+        }
+        ul .flat-button{
+            width: 80px;
+            height: 40px;
+        }
+        ul .half{
+            display: block;
+            width: 500px;
+            li{
+                width: 100%;
+
+            }
+        }
+    }
+}
+@media (max-width: 1000px){
+    .text-zone{
+        left: 20%;
+    }
+    .contact-form {
+        left: 20%;
+    }
+    .text-zone .contact-paragraph{
+        width: 100px;
+        min-width: 400px;
+        bottom: -120%;
+    }
+}
+@media (max-width: 700px){
+    .contact-form {
+        left: 25%;
+        top: 60%;
+        ul textarea{
+            width: 300px;
+            height: 100px;
+            font-size: 15px;
+
+        }
+
+        ul input{
+            font-size: 15px;
+
+            height: 30px;
+            width: 300px;
+
+        }
+        ul .flat-button{
+            width: 80px;
+            height: 40px;
+        }
+        ul .half{
+            display: block;
+            width: 300px;
+            li{
+                width: 100%;
+
+            }
+        }
+    }
+
+}
+
+
+/* end web media query *
+/* start mobile media query */
+
+    @media (max-width: 600px){
+        .contact-zone {
+            top: 25%;
+            .contact-paragraph{
+                bottom: -150%;
+                font-size: 12px;
+                min-width: 250px;
+            }
+        }
+        .contact-form {
+            left: 25%;
+            top: 61%;
+            ul textarea{
+                width: 220px;
+                height: 100px;
+                font-size: 15px;
+
+            }
+
+            ul input{
+                font-size: 13px;
+
+                height: 30px;
+                width: 220px;
+
+            }
+            ul .flat-button{
+                width: 60px;
+                height: 30px;
+            }
+            ul .half{
+                display: block;
+                width: 220px;
+                li{
+                    width: 100%;
+
+                }
+            }
+        }
+}
+
+
+/* end mobile media query */

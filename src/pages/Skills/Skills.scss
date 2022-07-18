@@ -1,0 +1,226 @@
+.skills-header{
+    color: #ffd700;
+}
+.skills-container {
+    margin-top: 20px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translateY(-50%);
+    
+    width: 700px;
+    height: 100vh;
+}
+.skill{
+    color: #ffd700;
+    font-family: "coolvetica";
+}
+
+
+.skills3d{
+    transition: 2s;
+    animation-name: floating;
+    animation-duration: 4s;
+    animation-iteration-count: infinite;
+    transition: 4s;
+    animation-timing-function: linear;
+    position: absolute;
+    top: -40%;
+    right: -100%;
+}
+.skills3d ul{
+    list-style: none;
+    display: block;
+    transform: skewY(-15deg);
+
+}
+
+@keyframes floating {
+    0% {transform:translateY(-10%);}
+    25% {transform:translateY(0);}
+    50% {transform:translateY(10%);}
+    75% {transform:translateY(0);}
+    100% {transform:translateY(-10%);}
+}
+.skills3d ul li{
+    padding-left: 10px;
+    background-color: #ffd700;
+    height: 80px;
+    width: 200px;
+    margin-bottom: 5px;
+    display: flex;
+    align-items: center;
+    color: #022c43;
+    font-weight: bold;
+    font-size: large;
+    position: relative;
+    transition: 0.5s;
+    border: 1px solid #022c43;
+    margin-left: 40px;
+
+}
+
+.skills3d ul li:hover::before,
+.skills3d ul li:hover::after{
+    cursor: pointer;
+    background-color: white;
+}
+.skills3d ul li:hover{
+    cursor: pointer;
+    background-color: white;
+    transform: translateX(-50px);
+}
+
+
+.skills3d ul li::before {
+    position: absolute;
+    content: "";
+    background-color: #ffd700;
+    width: 80px;
+    height: 80px;
+    left: -80px;
+    transform: skewY(45deg);
+    top: 0;
+    transition: 0.5s;
+    transform-origin: right;
+    border: 1px solid #022c43;
+    animation-name: floating;
+
+}
+
+
+
+.skills3d ul li::after {
+    position: absolute;
+    content: "";
+    background-color: #ffd700;
+    width: 210px;
+    height: 80px;
+    left: 0px;
+    transform: skewx(45deg);
+    top: -80px;
+    transition: 0.5s;
+    transform-origin: bottom;
+    border: 1px solid #022c43;
+
+}
+
+.skills3d ul li:first-child {
+    z-index: 6;
+}
+.skills3d ul li:nth-child(2) {
+    z-index: 5;
+}
+.skills3d ul li:nth-child(3) {
+    z-index: 4;
+}
+.skills3d ul li:nth-child(4) {
+    z-index: 3;
+}
+.skills3d ul li:nth-child(5) {
+    z-index: 2;
+}
+.skills3d ul li:last-child {
+    z-index: 1;
+}
+.skills3d ul li:last-child::after {
+    box-shadow: -180px 180px 20px rgba(0, 0, 0, 0.5) ;
+
+}
+
+
+
+
+
+
+/* start web media query */
+
+@media (max-width: 1570px){
+    .skills3d {
+        top: -40%;
+        right: -50%;
+    }
+}
+@media (max-width: 1000px){
+    .skills3d {
+        top: 80%;
+        left: 50%;
+        ul li{
+            font-size: 12px;
+            &:last-child::after {
+                box-shadow: -70px 70px 20px rgba(0, 0, 0, 0.5) ;
+            
+            }
+            &::before{
+                width: 20px;
+                height: 20px;
+                left: -20px;
+            }
+            &::after{
+                width: 68px;
+                height: 20px;
+                left: 2px;
+                top: -22px;
+            }
+            width: 60px;
+            height: 20px;
+        }
+    }
+    .text-zone{
+        left: 20%;
+    }
+    .skills-header {
+        color: #ffd700;
+        font-family: "coolvetica";
+        font-size: 60px;
+        margin-bottom: 50px;
+        transform: translateY(-100px);
+    }
+    p {
+        transform: translateY(-100px);
+    }
+}
+/* start web media query */
+/* start mobile media query */
+
+@media (max-width: 600px){
+    .skills3d {
+        top: 80%;
+        left: 50%;
+        ul li{
+            font-size: 12px;
+            &:last-child::after {
+                box-shadow: -70px 70px 20px rgba(0, 0, 0, 0.5) ;
+            
+            }
+            &::before{
+                width: 20px;
+                height: 20px;
+                left: -20px;
+            }
+            &::after{
+                width: 68px;
+                height: 20px;
+                left: 2px;
+                top: -22px;
+            }
+            width: 60px;
+            height: 20px;
+        }
+    }
+    .text-zone{
+        left: 20%;
+    }
+    .skills-header {
+        color: #ffd700;
+        font-family: "coolvetica";
+        font-size: 60px;
+        margin-bottom: 50px;
+        transform: translateY(-100px);
+    }
+    p {
+        transform: translateY(-100px);
+    }
+}
+
+/* end mobile media query */
