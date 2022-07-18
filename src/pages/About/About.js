@@ -28,7 +28,7 @@ export default function About (){
                         /> 
                     </h1>
                     <p className="firstp paragraph">My name is<span className="my-name"> Mohamed Abd-Elkhalek</span>
-                    , a civil engineer who decided to build the sites I love the most. Check out my <a className="my-cv" href="https://drive.google.com/file/d/1DiAhERPFhxlvYXdn2sl3Y6crUeicu9Dz/view?usp=sharing" target="_blank" rel="noopener noreferrer"> CV</a> for more info.
+                    , a civil engineer who decided to build the sites I love the most. Check out my <a className="my-cv" href="https://drive.google.com/file/d/1Evu8ZyYc8CkmZuQKq4J7bE4Db_MD2E7j/view?usp=sharing" target="_blank" rel="noopener noreferrer"> CV</a> for more info.
                     <br/>
                     <br/>
                     I am a very ambitious front-end developer looking for a role in established IT company

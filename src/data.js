@@ -2,8 +2,8 @@
 let data= [
         {
             image:"",
-            projectName:"Tenzies",
-            description:" A game with html, css, Reactjs,and js",
+            projectName:"Weather app",
+            description:" in progress....",
             url:""
         }
     ]
